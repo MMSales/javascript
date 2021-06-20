@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body {
+            background-color: rgb(90, 180, 150);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tá facilitando meu trabalho isso</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id='msg'>Clique em mim</div>
+    <div name='ai'>Ai que coisa maravilhosa</div>
+    <div id = 'fant'>Fantástico</div>
+    <script>
+        var corpo = window.document.body
+        corpo.style.background= 'black'
+        var p1= window.document.
+        getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        window.document.write("Olá, mundo!")
+        p1.style.color = 'blue'
+        window.document.write(p1.innerText)
+        document.write(p2.innerHTML)
+        var d = window.document.getElementById('msg')
+        d.style.background=('red')
+        d.innerText = 'Estou aguardando.........'
+        var a= window.document.getElementsByName('ai')[0]
+        a.innerText='OLÁ!'
+        var fan= window.document.querySelector('div#fant')
+        fan.style.background= 'green'
+    </script>
+</body>
+</html>

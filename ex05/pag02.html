@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        #box1 { font: normal 15pt Arial; 
+            background-color: brown;
+            height:300px;
+            width: 600px;
+            text-align: center;
+        }
+        #resposta{
+            background-color: white;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div id='box1'><h1>Vamos descobrir a sua nacionalidade</h1>
+    Qual país você nasceu? <input type="text" name="txtnac" id="nacionalidade">
+    <input type="button" value="Verificar" onclick="origem()">
+    <div id='resposta'>
+
+
+    </div>
+</div>
+<script>
+    function origem() {
+        var país = window.document.getElementById("nacionalidade")
+        var origem = String(país.value)
+        
+    
+        
+        if (origem=='Brasil') {
+            resposta.innerHTML =`Você é <strong>BRASILEIRO</strong>`
+        }
+        else {
+            resposta.innerHTML = `Você é <strong>ESTRANGEIRO</strong>`
+        }
+
+    }
+</script>
+  
+</body>
+</html>
