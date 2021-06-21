@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1 id = "saudação"></h1>
+    <h2 id="dia"></h2>
+    <h3>Digite sua idade</h3>
+    Idade <input type="number" name="txtidade" id="idade">
+    <input type="button" value="Verificar" onclick="verificaridade()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        /*
+        0= Domigo
+        1= Segunda
+        */
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        var dia = window.document.getElementById("dia")
+        var hora = agora.getHours()
+        saudação = window.document.getElementById("saudação")
+        switch(diaSem){
+            case 0:
+                dia.innerHTML = `Hoje é DOMINGO`
+                break
+            case 1:
+                dia.innerHTML = `Hoje é SEGUNDA`
+                break
+            case 2:
+                dia.innerHTML = `Hoje é TERÇA`
+                break
+            case 3: 
+                dia.innerHTML = `Hoje é QUARTA`
+                break
+            case 4:
+                dia.innerHTML = `Hoje é QUINTA`
+                break
+            case 5:
+                dia.innerHTML = `Hoje é SEXTA`
+                break
+            case 6:
+                dia.innerHTML = `Hoje é SÁBADO`
+                break
+            default:
+                dia.innerHTML = `Data INVÁLIDA`
+                break
+        }
+        if (hora<12) {
+            saudação.innerHTML = `BOM DIA!`
+        }
+            else if (hora>=12 && hora<18){
+                saudação.innerHTML = `BOA TARDE!`
+            }
+            else {
+                saudação.innerHTML = `BOA NOITE!`
+            }
+        function verificaridade(){
+            var idade = window.document.getElementById('idade')
+            var i = Number(idade.value)
+            var res = window.document.getElementById('res')
+            if (i<16){
+                res.innerHTML = `Você possui ${i} anos, sendo assim você NÃO VOTA`}
+                else if (i < 18 || i>65) {
+                res.innerHTML = `Você possui ${i} anos, sendo assim seu voto é OPCIONAL.`}
+                else {
+                res.innerHTML = `Você possui ${i} anos, sendo assim seu voto é VOTO É OBRIGATÓRIO..`
+            }
+            }
+    </script>
+</body>
+</html>
