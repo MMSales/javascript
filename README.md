@@ -1,2 +1,2 @@
 # javascript
- Aprendendo JavaScript
+ Introdução ao javascript
