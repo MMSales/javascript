@@ -7,8 +7,17 @@
     <title>Minha página</title>
     <script  type = "text/javascript" src="main.js"></script>
 </head>
-<body>
+<body onload="load()">
+    <button type="button"
+    onclick="botao()">Clique aqui</button>
     <h1>Minha primeira página com <br>JavaScript</h1>
-    
+    <p id="agradecimento" onclick="redirecionar()"></p>
+    <p id="mouse_move" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+    <p id="mouse_move" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+    <select onchange="change(this)">
+        <option value="1">Valor 1</option>
+        <option value="2">Valor 2</option>
+        <option value="3">Valor 3</option>
+    </select>
 </body>
 </html>
